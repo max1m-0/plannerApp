@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.transaction.jta.platform">org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform </property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/workers</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
+        <mapping resource="EmployeesEntity.hbm.xml"/>
+        <mapping class="entity.EmployeesEntity"/>
+        <mapping class="entity.TasksEntity"/>
+        <mapping resource="TasksEntity.hbm.xml"/>
+
+    </session-factory>
+</hibernate-configuration>

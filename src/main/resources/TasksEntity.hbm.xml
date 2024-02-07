@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="entity.TasksEntity" table="tasks" schema="workers">
+        <id name="idTask">
+            <column name="id_task" sql-type="int"/>
+        </id>
+        <property name="completed">
+            <column name="completed" sql-type="tinyint(1)" not-null="true"/>
+        </property>
+        <property name="task">
+            <column name="task" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="startDate">
+            <column name="start_date" sql-type="date" not-null="true"/>
+        </property>
+        <property name="endDate">
+            <column name="end_date" sql-type="date" not-null="true"/>
+        </property>
+        <property name="completedDate">
+            <column name="completed_date" sql-type="date" not-null="true"/>
+        </property>
+        <property name="idEmpl">
+            <column name="id_empl" sql-type="int" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
